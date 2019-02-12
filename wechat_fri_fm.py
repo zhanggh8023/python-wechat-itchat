@@ -1,5 +1,9 @@
 # coding:utf-8
 import itchat
+
+# 使用echarts，加上这段
+from echarts import Echart, Legend, Pie
+
 '''
 微信好友性别比例
 '''
@@ -32,8 +36,7 @@ print(u"男性好友：%.2f%%" % (float(male) / total * 100))
 print (u"女性好友：%.2f%%" % (float(female) / total * 100))
 print (u"未填性别：%.2f%%" % (float(other) / total * 100))
 
-# 使用echarts，加上这段
-from echarts import Echart, Legend, Pie
+
 
 chart = Echart(u'%s的微信好友性别比例' % (friends[0]['NickName']), 'from WeChat')
 chart.use(Pie('WeChat',
